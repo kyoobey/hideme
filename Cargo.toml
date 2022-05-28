@@ -1,0 +1,17 @@
+[package]
+name = "hideme"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+anyhow = "~1.0.57"
+bytemuck = { version = "~1.9.1", features = [ "derive" ] }
+clappers = "~2.0.2"
+image = "~0.24.2"
+itertools = "~0.10.3"
+log = "~0.4.17"
+pollster = "~0.2.5"
+simple_logger = { version = "~2.1.0", default-features = false, features = ["colors"] }
+wallpaper = "~3.2.0"
+winit = "~0.26.1"
+wgpu = "~0.12.0"
