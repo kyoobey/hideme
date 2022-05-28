@@ -2,8 +2,14 @@
 	"folders":
 	[
 		{
+			"path": "src",
+			"name": "code"
+		},
+		{
 			"path": ".",
-			"folder_exclude_patterns": [".sublime_workspaces"]
+			"name": "project_root",
+			"folder_exclude_patterns": [".sublime_workspaces", "target", "src"],
+			"file_exclude_patterns": ["Cargo.lock", "LICENSE"]
 		}
 	]
 }
