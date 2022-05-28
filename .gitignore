@@ -1,0 +1,11 @@
+
+
+
+# rust files
+target/
+Cargo.lock
+
+# sublime text files
+.sublime_workspaces/
+
+
