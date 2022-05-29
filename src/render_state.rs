@@ -111,12 +111,13 @@ impl RenderState {
 	) -> Self {
 		let window_size = window.inner_size();
 
-		let instance = wgpu::Instance::new(wgpu::Backends::all());
+		// let instance = wgpu::Instance::new(wgpu::Backends::all());
+		let instance = wgpu::Instance::new(if cfg!(windows) { wgpu::Backends::DX12 } else { wgpu::Backends::all() });
 		let surface = unsafe { instance.create_surface(&window) };
 		let adapter = instance.request_adapter(
 			&wgpu::RequestAdapterOptions {
-				power_preference: wgpu::PowerPreference::HighPerformance,
-				// power_preference: wgpu::PowerPreference::LowPower,
+				// power_preference: wgpu::PowerPreference::HighPerformance,
+				power_preference: wgpu::PowerPreference::LowPower,
 				compatible_surface: Some(&surface),
 				force_fallback_adapter: false
 			}
