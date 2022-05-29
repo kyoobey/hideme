@@ -196,7 +196,7 @@ impl RenderState {
 
 		let uniform_buffer = device.create_buffer_init(
 			&wgpu::util::BufferInitDescriptor {
-				label: Some("Camera Buffer"),
+				label: Some("Uniform Buffer"),
 				contents: bytemuck::cast_slice(&[uniforms]),
 				usage: wgpu::BufferUsages::UNIFORM | wgpu::BufferUsages::COPY_DST
 			}
