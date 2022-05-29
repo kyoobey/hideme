@@ -23,3 +23,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build
       run: cargo build --verbose
+    - name: Upload Build
+      uses: actions/upload-artifact@v3
+      with:
+        name: hideme_${{ matrix.os }}_main_${{ github.sha }}
+        path: target/debug/hideme*
