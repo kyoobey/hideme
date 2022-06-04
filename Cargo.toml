@@ -14,4 +14,5 @@ pollster = "~0.2.5"
 simple_logger = { version = "~2.1.0", default-features = false, features = ["colors"] }
 wallpaper = "~3.2.0"
 winit = "~0.26.1"
-wgpu = "~0.12.0"
+# wgpu = "~0.12.0"
+wgpu = { git = "https://github.com/gfx-rs/wgpu", rev = "46420212d71edb6daa1337284f6d94efa7c4ceb3" }
